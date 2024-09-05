@@ -1,0 +1,25 @@
+﻿@using WebApplicationTask.Controllers.Departments.Dtos
+
+@model DepartmentDetailsDto
+
+<h1 style="color:red">The department name is : @Model.Name</h1>
+<br />
+<br />
+<br />
+<h2>Sub-Departments</h2>
+<ul>
+    @foreach (var subDept in Model.SubDepartmentsData)
+    {
+        <li style="color:blue; text-decoration: solid">@subDept.Name</li>
+    }
+</ul>
+<br />
+<br />
+<br />
+<h2>Parent Departments</h2>
+<ul>
+    @foreach (var parentDept in ViewBag.ParentDepartments as List<DepartmentDto>)
+    {
+        <li style="color:blue; text-decoration: solid">@parentDept.Name</li>
+    }
+</ul>

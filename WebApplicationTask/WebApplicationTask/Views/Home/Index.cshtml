@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Welcome to the Department Management System</h1>
+
+    <h2>Departments</h2>
+
+    <p>
+        <a asp-controller="Departments" asp-action="Index">View All Departments</a>
+    </p>
+    <p>
+        <a asp-controller="Departments" asp-action="Details" asp-route-id="2"> (Just for testing on id = 2)View Details of Department </a>
+    </p>
+
+    <h2>Reminders</h2>
+    <p>
+        <a asp-controller="Reminders" asp-action="Index">View All Reminders</a>
+    </p>
+</div>

@@ -1,0 +1,14 @@
+﻿@using WebApplicationTask.Controllers.Reminders.Dtos
+
+@model IEnumerable<ReminderDto>
+
+<h1>Reminders</h1>
+
+<a href="@Url.Action("Create")">Create New Reminder</a>
+
+<ul>
+    @foreach (var reminder in Model)
+    {
+        <li>@reminder.Title - @reminder.ReminderDateTime</li>
+    }
+</ul>
